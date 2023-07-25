@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_article, only: %i[show edit update]
+  before_action :find_article, only: %i[show edit update destroy]
 
   def index
     # List all articles, with more recent ones at the top
@@ -25,8 +25,12 @@ class ArticlesController < ApplicationController
     redirect_to article_path(@article)
   end
 
-  # def destroy
-  # end
+  def destroy
+    # @article.destroy will do the same job but is generally preferred if there're callback actions
+    @article.delete
+    redirect_to articles_path, status: :see_other
+  end
+
   private
 
   def find_article
