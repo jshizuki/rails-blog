@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Jshizuki's blog</a>
+  </div>
+</nav>
+<div class="container mt-3">
+  <% @articles.each do |article| %>
+    <ul class="list-unstyled">
+      <li class="fs-2"><%= article.title %></li>
+      <li class="fs-5"><%= article.content.truncate(80) %></li>
+    </ul>
+  <% end %>
+</div>

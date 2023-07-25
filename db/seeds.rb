@@ -6,10 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts 'Destroying previous articles...'
+Article.destroy_all
+
 puts 'Creating faker articles...'
 
 10.times do
-  article = Article.create(title: Faker::Book.title, content: Faker::Quote.matz)
+  article = Article.create(title: Faker::Book.unique.title, content: Faker::Quote.unique.matz)
   puts "Article #{article.id} has been created."
 end
 
