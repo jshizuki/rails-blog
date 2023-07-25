@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 # Manually added gems
 gem "faker"
+# Need to run "rails g simple_form:install --bootstrap", then restart server
+gem "simple_form"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
