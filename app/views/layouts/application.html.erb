@@ -15,7 +15,10 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render "shared/navbar" %>
-    <%= yield %>
+    <div class="content">
+      <div class="background-layer"></div>
+      <%= render "shared/navbar" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

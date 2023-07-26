@@ -1,7 +1,7 @@
 <div class="container mt-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title fs-2 text-info"><%= @article.title %></h5>
+      <h5 class="card-title fs-2 text-danger"><%= @article.title %></h5>
       <p class="card-text fs-5"><%= @article.content %></p>
       <%= link_to "Back", articles_path, class: "card-link link-secondary" %>
       <%= link_to "Update this article", edit_article_path(@article), class: "card-link link-secondary" %>

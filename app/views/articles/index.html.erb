@@ -2,8 +2,9 @@
   <% article_number = @articles.count + 1 %>
   <% @articles.each do |article| %>
     <ul class="list-unstyled">
-      <li><%= link_to "##{article_number -= 1} #{article.title}", article_path(article), class: "text-decoration-none link-info fs-2" %></li>
-      <li class="fs-5 text-secondary"><%= article.content.truncate(80)%></li>
+      <li><%= link_to "##{article_number -= 1} #{article.title}", article_path(article), class: "text-decoration-none link-danger fs-2" %></li>
+      <li class="fs-5 text-dark"><%= article.content.truncate(80)%></li>
     </ul>
   <% end %>
+  <br>
 </div>
