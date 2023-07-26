@@ -1,6 +1,5 @@
 <%= simple_form_for [@article] do |each| %>
   <%= each.input :title %>
   <%= each.input :content %>
-  <%= each.submit class: 'btn btn-primary'  %>
-<% end %><br>
-<%= link_to "Back", articles_path, class: "text-decoration-none link-secondary" %>
+  <%= each.submit @article.new_record? ? 'Create blog' : 'Update blog', class: 'btn btn-danger mb-2'%>
+<% end %>
