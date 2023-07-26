@@ -1,7 +1,8 @@
 <div class="container mt-3 text-center">
+  <% article_number = @articles.count + 1 %>
   <% @articles.each do |article| %>
     <ul class="list-unstyled">
-      <li class="fs-2"><%= link_to article.title, article_path(article), class: "text-decoration-none link-info" %></li>
+      <li class="fs-2"><%= link_to "##{article_number -= 1} #{article.title}", article_path(article), class: "text-decoration-none link-info" %></li>
       <li class="fs-5 text-secondary"><%= article.content.truncate(80)%></li>
     </ul>
   <% end %>

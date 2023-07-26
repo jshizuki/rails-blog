@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/articles">
       <img src="https://avatars.githubusercontent.com/u/30733?v=4" alt="matz-photo" width="30" height="30" class="rounded-pill">
-      The mind of Matz
+      The mastermind of Matz
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <%= link_to 'New Blog', new_article_path, class: "nav-link" %>
+          <%= link_to new_article_path, class: "nav-link" do %>
+            <i class="devicon-ruby-plain colored"></i>
+            New Blog
+          <% end %>
         </li>
       </ul>
     </div>
