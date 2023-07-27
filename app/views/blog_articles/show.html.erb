@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title fs-2 text-danger"><%= @article.title %></h5>
+      <p class="card-text fs-5"><%= @article.content %></p>
+      <%= link_to "Back", blog_articles_path, class: "card-link link-secondary" %>
+      <%= link_to "Update this article", edit_blog_article_path(@article), class: "card-link link-secondary" %>
+      <%= link_to "Delete this article", blog_article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this entry?"}, class: "card-link link-secondary" %>
+    </div>
+  </div>
+</div>

@@ -7,13 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts 'Destroying previous articles...'
-Article.destroy_all
+BlogArticle.destroy_all
 
 puts 'Creating faker articles...'
 
 10.times do
-  article = Article.create(title: Faker::Book.unique.title, content: Faker::Quote.unique.matz)
+  article = BlogArticle.create(title: Faker::Book.unique.title, content: Faker::Quote.unique.matz)
   puts "Article #{article.id} has been created."
 end
 
-puts "You have created #{Article.count} articles successfully."
+puts "You have created #{BlogArticle.count} articles successfully."
