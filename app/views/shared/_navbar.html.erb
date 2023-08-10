@@ -1,9 +1,9 @@
 <nav class="navbar sticky-top navbar-expand navbar-light bg-light p-1">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/articles">
+    <%= link_to blog_articles_path, class: "navbar-brand" do %>
       <img src="https://avatars.githubusercontent.com/u/30733?v=4" alt="matz-photo" width="30" height="30" class="rounded-pill">
       The mastermind of Matz
-    </a>
+    <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
